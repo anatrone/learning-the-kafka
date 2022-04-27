@@ -1,0 +1,16 @@
+{
+  "name": "custumer-connector",  
+  "config": {  
+    "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+		"tasks.max": "1",
+    "database.hostname": "localhost",
+    "database.port": "1433",
+    "database.user": "sa",
+    "database.password": "Mysqlserver@123",
+    "database.dbname": "KConnectCDC",
+    "database.server.name": "kconnectmssql",
+    "table.whitelist": "dto.customer",
+    "database.history.kafka.bootstrap.servers":"kafka:9092",
+    "database.history.kafka.topic": "dbhistory.custumer"
+	}
+}
